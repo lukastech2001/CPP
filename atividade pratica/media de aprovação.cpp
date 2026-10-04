@@ -5,20 +5,22 @@ using namespace std;
 
 int main()
 {
-    // Variáveis
+    // Variï¿½veis
     cout << fixed << setprecision(2);
 
     float nt_1,nt_2,nt_3,nt_4 = 0;
     float soma = 0;
     float md = 0;
     float frenq = 0;
+    float nDeAulas = 0;
+    float nDeAulasFreq = 0;
 
     setlocale(LC_ALL,"");
     system("color F1");
 
-    // Código
+    // Cï¿½digo
 
-    cout << "\n --- Média para Aprovação ---\n ";
+    cout << "\n --- Mï¿½dia para Aprovaï¿½ï¿½o ---\n ";
 
     cout << " Nota 1 : " ;
     cin >> nt_1;
@@ -29,9 +31,16 @@ int main()
     cout << " Nota 4 : " ;
     cin >> nt_4;
     md = nt_1+nt_2+nt_3+nt_4;
-    cout << " Sua Média = : " << md/4 << endl;
-    cout << " Sua frequencia: ";
-    cin >>frenq;
+    cout << " Sua Mï¿½dia = : " << md/4 << endl;
+    cout << "\nCalcular  Frequencia Escolar: \n";
+    cout << " Minimo exigido Ã© de 75%\n ";
+    cout << " Digite o numero de aulas que vc veio: \n";
+    cin >> nDeAulasFreq;
+    cout << " \n Agora o numero de aulas total do Curso: ";
+    cin >> nDeAulas; 
+    frenq = (nDeAulasFreq/nDeAulas)*100;
+    cout << " Sua Frequencia Ã© de : " << frenq; 
+    
 
     if (md >= 6 and frenq >= 75)
     {
@@ -40,9 +49,9 @@ int main()
 
     else if (md >= 4 and md <6 and frenq >=75)
     {
-        cout << "\n O aluno está em Reavaliação !!\n ";
+        cout << "\n O aluno estï¿½ em Reavaliaï¿½ï¿½o !!\n ";
     }
     else
-        cout << " O aluno está reprovado\n";
+        cout << " O aluno estï¿½ reprovado\n";
 
 }
